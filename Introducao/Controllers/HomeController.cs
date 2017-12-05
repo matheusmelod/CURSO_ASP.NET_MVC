@@ -19,9 +19,9 @@ namespace Introducao.Controllers
                 Tipo = "Cientista"
             };
 
-            ViewData["PessoaId"] = pessoa.PessoaId;
-            ViewData["Nome"] = pessoa.Nome;
-            ViewData["Tipo"] = pessoa.Tipo; 
+            ViewBag.id = pessoa.PessoaId;
+            ViewBag.nome = pessoa.Nome;
+            ViewBag.tipo = pessoa.Tipo; 
 
             return View();
         }
