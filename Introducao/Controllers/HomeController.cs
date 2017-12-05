@@ -18,12 +18,7 @@ namespace Introducao.Controllers
                 Nome = "Matheus Melo",
                 Tipo = "Cientista"
             };
-
-            ViewBag.id = pessoa.PessoaId;
-            ViewBag.nome = pessoa.Nome;
-            ViewBag.tipo = pessoa.Tipo; 
-
-            return View();
+            return View(pessoa);
         }
 
         public ActionResult Contatos()
