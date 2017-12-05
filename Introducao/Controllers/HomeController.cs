@@ -27,13 +27,9 @@ namespace Introducao.Controllers
         }
 
         [HttpPost]
-        public ActionResult Lista(FormCollection form)
+        public ActionResult Lista(Pessoa pessoa)
         {
-            ViewData["PessoaId"] = form["PessoaId"];
-            ViewData["Nome"] = form["Nome"];
-            ViewData["Tipo"] = form["Tipo"];
-
-            return View();
+            return View(pessoa);
         }
     }
 }
