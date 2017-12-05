@@ -27,11 +27,11 @@ namespace Introducao.Controllers
         }
 
         [HttpPost]
-        public ActionResult Lista(int PessoaId, string Nome, string Tipo)
+        public ActionResult Lista(FormCollection form)
         {
-            ViewData["PessoaId"] = PessoaId;
-            ViewData["Nome"] = Nome;
-            ViewData["Tipo"] = Tipo;
+            ViewData["PessoaId"] = form["PessoaId"];
+            ViewData["Nome"] = form["Nome"];
+            ViewData["Tipo"] = form["Tipo"];
 
             return View();
         }
